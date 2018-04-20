@@ -1,0 +1,12 @@
+<div>
+  <span *ngFor="let i of [1,2,3,4,5]"
+        [class.editable]="isEditable()"
+        [class.large]="isLargeSize()"
+        (click)="setCurrentRating(i)">
+    <i [class.fas]="lessOrEqualToCurrentRating(i)"
+       [class.far]="!lessOrEqualToCurrentRating(i)"
+       [ngStyle]="{'color': getRatingColor(i)}"
+       class="fa-star">
+    </i>
+  </span>
+</div>

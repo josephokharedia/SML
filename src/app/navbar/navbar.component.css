@@ -1,0 +1,9 @@
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #dddddd;
+  -moz-box-shadow: 0 8px 6px -6px #dddddd;
+  box-shadow: 0 8px 6px -6px #dddddd;
+}
+
+ul.navbar-nav li.active a {
+  color: #007bff;
+}

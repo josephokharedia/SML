@@ -1,0 +1,11 @@
+<app-search [residentialType]="ResidentialType.STREET" (placeChanged)="search($event)"></app-search>
+
+<div class="container mt-5">
+  <!--<div class="row">-->
+  <h5 class="mb-4">Latest Reviews</h5>
+  <div class="card-columns">
+
+    <app-review-result *ngFor="let r of latestReviews" [review]="r"></app-review-result>
+
+  </div>
+</div>

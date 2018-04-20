@@ -1,0 +1,46 @@
+<app-search [simple]="true"></app-search>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+      <h2 class="display-4 mb-4">Write a review</h2>
+      <div class="card">
+        <div class="card-body">
+
+          <div class="mb-4">
+            <h4 class="text-muted">{{currentAddress}}</h4>
+          </div>
+
+          <div class="mb-4">
+            <h4>Rating</h4>
+            <app-rating [editable]="true" [size]="RatingSize.LARGE"></app-rating>
+          </div>
+
+          <div class="my-4">
+            <h4>Your review</h4>
+            <textarea class="form-control" rows="7"
+                      placeholder="Share your experience and help others make informed decisions" required></textarea>
+          </div>
+
+          <div class="my-4">
+            <h4>Title of your review</h4>
+            <input type="text" class="form-control" id="title" aria-describedby="titleHelp"
+                   placeholder="Create a title for your review">
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-primary btn-lg" role="button">
+              <i class="fas fa-cloud-upload-alt"></i>&nbsp;
+              Publish your Review
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

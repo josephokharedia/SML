@@ -1,0 +1,17 @@
+<app-search [simple]="true"></app-search>
+<div class="container mt-5 h-100">
+  <div class="row h-100">
+    <div class="h-100 col-sm-8 border-right">
+      <h5 class="mb-4">Search Results</h5>
+      <div *ngFor="let r of reviews">
+        <app-review-result [review]="r"></app-review-result>
+      </div>
+    </div>
+
+    <div class="col-sm-4 h-100">
+      <div class="border-bottom mb-4">
+        <h6>Nearby reviews</h6>
+      </div>
+    </div>
+  </div>
+</div>

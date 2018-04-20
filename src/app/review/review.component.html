@@ -1,0 +1,21 @@
+<app-search [simple]="true"></app-search>
+
+<div class="container mt-5 h-100">
+  <div class="row h-100">
+    <div class="col-sm-9 border-right h-100">
+      <h4 class="text-muted">{{review.address}}</h4>
+      <app-rating [rating]="review.rating"></app-rating>
+      <blockquote class="blockquote pt-4 pr-4">
+        <h3>{{review.title}}</h3>
+        {{review.description}}
+        <footer class="blockquote-footer pt-4 ">by {{review.tenant}} on {{review.created | date:'dd MMMM yyyy'}}
+        </footer>
+      </blockquote>
+    </div>
+    <div class="col-sm-3">
+      <div class="border-bottom">
+        <h6>Popular reviews</h6>
+      </div>
+    </div>
+  </div>
+</div>

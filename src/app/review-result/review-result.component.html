@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="card-title text-uppercase text-truncate">{{review.address}}}</h6>
+
+
+    <div class="card-text">
+      <div class="float-left text-muted">{{review.created | date:'dd MMMM yyyy HH:mm'}}</div>
+      <div class="float-right">
+        <app-rating [rating]="review.rating"></app-rating>
+      </div>
+      <div class="clearfix mb-1"></div>
+      <div class="py-2">
+        <a [routerLink]="['/review',review.id]">
+          {{review.title}}
+        </a>
+      </div>
+    </div>
+    <footer class="blockquote-footer">{{review.tenant}}</footer>
+  </div>
+</div>
+
+
+<!--<p class="float-left card-subtitle mb-2 text-muted">{{review.created | date:'dd MMMM yyyy HH:mm'}}</p>-->
+<!--<div class="float-right">-->
+<!--<app-rating [rating]="review.rating"></app-rating>-->
+<!--</div>-->
+<!--<div class="clearfix"></div>-->

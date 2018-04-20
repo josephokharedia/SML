@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card-box py-4">
+        <div class="text-center">
+
+          <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="mb-3 img-circle img-thumbnail"
+               alt="profile-image">
+
+          <h4>John J. Doe</h4>
+          <span class=" badge badge-info">240 reviews</span>
+
+        </div>
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav flex-column" role="tablist">
+            <li *ngFor="let n of navigations" class="nav-item" [class.active]="isActive(n)" (click)="menuAction(n)">
+              <a routerLink="{{n.link}}" class="nav-link">
+                <i *ngIf="n.iconClass" class="{{n.iconClass}}"></i>
+                {{n.text}}</a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+
+      </div>
+
+
+    </div><!-- end col -->
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

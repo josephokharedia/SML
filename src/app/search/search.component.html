@@ -1,0 +1,50 @@
+<div class="jumbotron jumbotron-fluid jumbotron-billboard mt-4">
+
+  <div class="img"></div>
+
+  <div class="container">
+    <div *ngIf="!simple">
+      <h2 class="display-4">Landlord Reviews</h2>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+    </div>
+    <form>
+      <div class="btn-group btn-group-toggle mb-sm-1" data-toggle="buttons">
+        <label [class.active]="isStreet()" class="btn btn-secondary" (click)="setToStreet()">
+          <input [checked]="isStreet()" type="radio" name="options" id="street"> Street
+        </label>
+        <label [class.active]="isComplex()" class="btn btn-secondary" (click)="setToComplex()">
+          <input [checked]="isComplex()" type="radio" name="options" id="complex"> Complex
+        </label>
+      </div>
+
+      <div class="input-group mb-1">
+        <input type="search" class="form-control form-control-lg" #searchControl
+               placeholder="Enter {{ isStreet()? 'Street address': isComplex()? 'Complex name' : '' }}"
+               aria-label="Complex name/Street address" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary btn-lg" type="button">Search</button>
+        </div>
+      </div>
+
+      <div *ngIf="isComplex()" class="row">
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="complexUnit" aria-describedby="complexUnitHelp"
+                 placeholder="Complex unit number">
+        </div>
+      </div>
+      <small *ngIf="isComplex()" class="form-text text-muted">Enter complex unit number below</small>
+    </form>
+
+    <div *ngIf="!simple">
+      <h5 class="text-muted my-3 ml-1">OR</h5>
+      <div>
+        <a class="btn btn-primary btn-lg btn-review" [routerLink]="['/write-review']" role="button">
+          <i class="far fa-edit"></i>&nbsp;
+          Write your own Review
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
